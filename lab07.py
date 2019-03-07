@@ -35,6 +35,9 @@ def game_list():
         except IndexError:
             print('Incorrect input try again')
             continue
+        except ValueError:
+            print('Incorrect input try again')
+            continue
         if len(coordinates) > 2:
             print('Incorrect input try again')
             input_correct = False
@@ -76,6 +79,9 @@ def game_map():
             x_coordinate = int(coordinates[0])
             y_coordinate = int(coordinates[1])
         except IndexError:
+            print('Incorrect input try again')
+            continue
+        except ValueError:
             print('Incorrect input try again')
             continue
         if len(coordinates) > 2:
